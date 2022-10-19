@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: ms-customers
+          uri: lb://MS-CUSTOMERS
+          predicates:
+            - Path=/api/customers/**
+          filters:
+            - StripPrefix=2
+        - id: ms-bank-account
+          uri: lb://MS-BANK-ACCOUNT
+          predicates:
+            - Path=/api/bank_accounts/**
+          filters:
+            - StripPrefix=2
