@@ -14,3 +14,9 @@ spring:
             - Path=/api/bank_accounts/**
           filters:
             - StripPrefix=2
+        - id: ms-customers-transaction-query
+          uri: lb://MS-CUSTOMERS-TRANSACTION-QUERY
+          predicates:
+            - Path=/api/transactions/**
+          filters:
+            - StripPrefix=2
