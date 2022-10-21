@@ -32,3 +32,9 @@ spring:
             - Path=/api/credits/**
           filters:
             - StripPrefix=2
+        - id: ms-credits-transactions
+          uri: lb://MS-CREDITS-TRANSACTIONS
+          predicates:
+            - Path=/api/credits/transactions/**
+          filters:
+            - StripPrefix=3
