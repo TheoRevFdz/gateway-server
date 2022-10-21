@@ -26,3 +26,9 @@ spring:
             - Path=/api/customer_account/**
           filters:
             - StripPrefix=2
+        - id: ms-credits
+          uri: lb://MS-CREDITS
+          predicates:
+            - Path=/api/credits/**
+          filters:
+            - StripPrefix=2
