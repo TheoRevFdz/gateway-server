@@ -8,10 +8,10 @@ spring:
             - Path=/api/customers/**
           filters:
             - StripPrefix=2
-        - id: ms-bank-account
-          uri: lb://MS-BANK-ACCOUNT
+        - id: ms-accounts
+          uri: lb://MS-ACCOUNTS
           predicates:
-            - Path=/api/bank_accounts/**
+            - Path=/api/accounts/**
           filters:
             - StripPrefix=2
         - id: ms-customers-transaction-query
