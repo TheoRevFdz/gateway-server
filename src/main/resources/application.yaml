@@ -20,10 +20,10 @@ spring:
             - Path=/api/transactions/**
           filters:
             - StripPrefix=2
-        - id: ms-customer-account
-          uri: lb://MS-CUSTOMER-ACCOUNT
+        - id: ms-responsibles
+          uri: lb://MS-RESPONSIBLES
           predicates:
-            - Path=/api/customer_account/**
+            - Path=/api/responsibles/**
           filters:
             - StripPrefix=2
         - id: ms-credits
